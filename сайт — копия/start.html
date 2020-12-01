@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Комплектующие для ПК</title>
+		<link rel="shortcut icon" href="media/favicon.png">
+		<link rel="stylesheet" href="css/style.css">
+		<script>
+			window.addEventListener('scroll', scr);
+			function scr() {
+				if (pageYOffset > window.innerHeight / 2) {
+					var upper = document.getElementById("uppr");
+					upper.style.display = "inline";
+				} else {
+					var upper = document.getElementById("uppr");
+					upper.style.display = "none";
+				}
+			}
+		</script>
+	</head>
+	<body style="background-color: #242424;">
+		<div class="fullscreen-bg">
+			<video loop muted autoplay class="fullscreen-bg__video">
+				<source src="media/background.mp4" type="video/mp4">
+			</video>
+			<div class="over"></div>
+		</div>
+		<nav>
+			<a href="1.html">Первая ссыль</a>
+			<a href="2.html">Вторая ссыль</a>
+		</nav>
+		<div class="start">Хотите собрать себе новый ПК, но не знаете с чего начать?
+			<span><br>Мы вам поможем!</span>
+		</div>
+		<a href="#start"><img class="startimg" src="media/start.gif"></a>
+		<form action="#">
+			<div class="signin">
+				<input type="text" placeholder="Логин">
+				<input type="password" placeholder="Пароль">
+				<input class="signin-submit" type="submit" value="ВОЙТИ">
+			</div>
+		</form>
+		<div class="reg">Давайте зарегистрируемся?
+			<br><span>(Регистрация < 1 минуты)</span>
+			<div class="buttonreg"><p>Регистрируемся!</p></div>
+		</div>
+		<a href="#" title="Вернуться наверх" class="buttonup" id="uppr"><img src="media/up.png"></a>
+		<div class="gran">© 2020 ООО "Рога и Копыта"<a name="start"></a></div>
+	</body>
+</html>

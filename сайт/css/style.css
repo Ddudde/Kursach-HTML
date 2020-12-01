@@ -1,0 +1,153 @@
+.fullscreen-bg {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -100;
+}
+
+nav{
+	display: none;
+}
+
+.start{
+	color: #ff9700;
+	font-size: 48px;
+	text-align: center;
+	font-weight: bold;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.startimg{
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -90%);
+}
+
+.posit{
+	transform-style: preserve-3d;
+	position: absolute;
+	top: 150%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.help, .helpa{
+	color: #FFFFFF;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.helpa{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#v{
+	display: none;
+}
+
+.help{
+	position: absolute;
+	top: -100%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+.vxod, .reg{
+	background-color: rgba(245, 246, 247);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.65), inset 0 1px white, inset 0 0 1px white;
+	border-radius: 4px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-right: 12px;
+	width: 660px;
+	transition: all 0.4s ease;
+}
+
+.reg{
+	position: absolute;
+	transform: rotateX(90deg);
+}
+
+input[type="text"], input[type="password"] {
+  border-radius: 4px;
+  background-color: #f5f6f7;
+  box-shadow: 0 1px white, inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #b1b3b8;
+  font-size: 18px;
+  height: 57px;
+  margin-left: 12px;
+  padding-left: 12px;
+  width: 248px;
+}
+
+input[type="submit"] {
+	background: linear-gradient(45deg, #713504, #B8860B, #713504);
+	border: 0;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	height: 52px;
+	margin-left: 12px;
+	padding: 0 12px;
+	position: relative;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.54);
+}
+
+input[type="submit"]:hover
+{
+	box-shadow: 0 0 5px 5px #B8860B;
+	transition: all 0.5s ease;
+}
+
+input[type="submit"]:active
+{
+	box-shadow: 0 0 10px 10px #B8860B;
+	transition: all 0.1s ease;
+}
+
+.gran{
+	color: #ff9700;
+	position: absolute;
+	top: 200%;
+	left: 85%;
+	transform: translate(-85%, -100%);
+}
+
+.buttonup {
+	width: 88px; 
+	height: 118px;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	display: none;
+}
+
+.over{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0, 0.7);
+	min-height: 700px;
+	min-width: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+.fullscreen-bg__video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 700px;
+	min-width: 100%;
+	width: 100%;
+	background-position: center center;
+}
