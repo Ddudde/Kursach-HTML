@@ -62,12 +62,10 @@ nav{
 
 .vxod, .reg{
 	background-color: rgba(245, 246, 247);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.65), inset 0 1px white, inset 0 0 1px white;
 	border-radius: 4px;
 	padding-top: 9px;
 	padding-bottom: 9px;
 	padding-right: 12px;
-	width: 660px;
 	transition: all 1s ease;
 }
 
@@ -89,8 +87,9 @@ input[type="text"], input[type="password"] {
 }
 
 input[type="submit"] {
-	background: linear-gradient(45deg, #713504, #B8860B, #713504);
+	background: #c14503;
 	border: 0;
+	border-radius: 5px;
 	color: #FFFFFF;
 	cursor: pointer;
 	font-size: 16px;
@@ -99,19 +98,31 @@ input[type="submit"] {
 	margin-left: 12px;
 	padding: 0 12px;
 	position: relative;
-	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.54);
+	text-shadow: 2px 2px 0px black;
+	box-shadow: inset 0 -5px 2px rgba(255, 255, 255, 0.2);
 }
 
 input[type="submit"]:hover
 {
-	box-shadow: 0 0 5px 5px #B8860B;
+	text-shadow: 0 0 0;
+	box-shadow: 0 0 5px 5px #B8860B, inset 0 -50px 2px rgba(255, 255, 255, 0.2);
 	transition: all 0.5s ease;
 }
 
 input[type="submit"]:active
 {
-	box-shadow: 0 0 10px 10px #B8860B;
+	text-shadow: 0 0 0;
+	box-shadow: 0 0 10px 10px #B8860B, inset 0 -50px 2px rgba(0, 0, 0, 0.2);
 	transition: all 0.1s ease;
+}
+
+input[type="submit"]:focus
+{
+	outline: none;
+}
+
+.pass{
+	margin-top: 9px;
 }
 
 .gran{
