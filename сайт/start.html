@@ -6,39 +6,45 @@
 		<link rel="shortcut icon" href="media/favicon.png">
 		<link rel="stylesheet" href="css/style.css">
 		<script>
-			window.addEventListener('scroll', scr);
+			var upper, vxod, reg, r, v;
+			window.onload = function(){
+				upper = document.getElementById("uppr");
+				vxod = document.getElementById("vxod");
+				reg = document.getElementById("reg");
+				r = document.getElementById("r");
+				v = document.getElementById("v");
+				window.addEventListener('scroll', scr);
+				scr();
+			}
 			function scr() {
-				if (pageYOffset > window.innerHeight / 2) {
-					var upper = document.getElementById("uppr");
+				if (pageYOffset > window.innerHeight / 2)
 					upper.style.display = "inline";
-				} else {
-					var upper = document.getElementById("uppr");
+				else
 					upper.style.display = "none";
-				}
 			}
 			function onreg(){
-				var vxod = document.getElementById("vxod");
 				vxod.style.transform = "rotateX(90deg)";
-				vxod.style.position = "absolute";
-				var reg = document.getElementById("reg");
-				reg.style.transform = "rotateX(0deg)";
-				reg.style.position = "relative";
-				var r = document.getElementById("r");
-				var v = document.getElementById("v");
-				r.style.display = "none";
-				v.style.display = "inline";
+				vxod.addEventListener('transitionend', chvxod);
 			}
 			function onvxod(){
-				var vxod = document.getElementById("vxod");
+				reg.style.transform = "rotateX(90deg)";
+				reg.addEventListener('transitionend', chreg);
+			}
+			function chvxod(){
+				vxod.style.position = "absolute";
+				reg.style.transform = "rotateX(0deg)";
+				reg.style.position = "relative";
+				r.style.display = "none";
+				v.style.display = "inline";
+				vxod.removeEventListener('transitionend', chvxod);
+			}
+			function chreg(){
+				reg.style.position = "absolute";
 				vxod.style.transform = "rotateX(0deg)";
 				vxod.style.position = "relative";
-				var reg = document.getElementById("reg");
-				reg.style.transform = "rotateX(90deg)";
-				reg.style.position = "absolute";
-				var r = document.getElementById("r");
-				var v = document.getElementById("v");
 				r.style.display = "inline";
 				v.style.display = "none";
+				reg.removeEventListener('transitionend', chreg);
 			}
 		</script>
 	</head>
