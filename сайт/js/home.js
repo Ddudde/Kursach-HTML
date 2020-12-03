@@ -79,7 +79,6 @@ function vxo(){
 function rego(){
 	if(regb && pasr.value && logr.value){
 		let ch = ch1.checked ? 1 : ch2.checked ? 2 : 3;
-		//window.location.search = "";
 		window.location.hash = `login=${logr.value};pas=${pasr.value};ch=${ch}`;
 		onvxod();
 	}
