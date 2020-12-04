@@ -6,59 +6,12 @@
 		<link rel="shortcut icon" href="media/favicon.png">
 		<link rel="stylesheet" href="css/home.css">
 		<script src="js/home.js"></script>
+		<script src="js/default.js"></script>
 	</head>
-	<body style="background-color: #242424;">
-		<div class="fullscreen-bg">
-			<video loop muted autoplay class="fullscreen-bg__video">
-				<source src="media/background.mp4" type="video/mp4">
-			</video>
-			<div class="over"></div>
-		</div>
-		<nav>
-			<a href="1.html">Первая ссыль</a>
-			<a href="2.html">Вторая ссыль</a>
-		</nav>
-		<div class="start">Хотите собрать себе новый ПК, но не знаете с чего начать?
-			<span><br>Мы вам поможем!</span>
-		</div>
-		<div class="startimg" onclick="kon();"><img src="media/start.gif"></div>
-		<form action="#" class="posit">
-			<header class="help">
-				<span id="r">Нет аккаунта? <a class="helpa" onclick="onreg();">Регистрация!</a></span>
-				<span id="v">Есть аккаунт? <a class="helpa" onclick="onvxod();">Вход!</a></span>
-			</header>
-			<div class="vxod" id="vxod">
-				<div>
-					<div class="warne" id="warnew"><img src="media/warning.png" class="warnimg">Внимание! <p>Неверный логин или пароль</p></div>
-					<div class="warne" id="warnev"><img src="media/warning.png" class="warnimg">Внимание! <p>Допустимы только латинница и цифры</p></div>
-					<input class="login" type="text" placeholder="Логин" id="logv" required pattern="^[a-zA-Z0-9]+$">
-					<span class="warn" id="warnc"><img src="media/warning.png" class="warnimg">Включён Caps Lock!</span>
-				</div>
-				<div>
-					<input class="pass" type="password" placeholder="Пароль" id="pasv" required pattern="^[a-zA-Z0-9]+$">
-				</div>
-				<div class="button" onclick="vxo();">ВОЙТИ!</div>
-			</div>
-			<div class="reg" id="reg">
-				<div class="logo">
-					<p>Выберите иконку для профиля:</p>
-					<input id="ch1" name="ico" type="radio" value="1" checked><img src="media/ls-icon1.png">
-					<input id="ch2" name="ico" type="radio" value="2"><img src="media/ls-icon2.png">
-					<input id="ch3" name="ico" type="radio" value="3"><img src="media/ls-icon3.png">
-				</div>
-				<div>
-					<div class="warne" id="warner"><img src="media/warning.png" class="warnimg">Внимание! <p id="wt">Допустимы только латинница и цифры</p></div>
-					<input class="login" type="text" placeholder="Логин" id="logr" required pattern="^[a-zA-Z0-9]+$">
-					<span class="warn" id="warnc"><img src="media/warning.png" class="warnimg">Включён Caps Lock!</span>
-				</div>
-				<div>
-					<input class="pass" type="password" placeholder="Пароль" id="pasr" required pattern="^[a-zA-Z0-9]+$">
-					<span class="rand" onclick="gen_pas();"><img src="media/random.png" class="randimg">Случайный пароль</span>
-				</div>
-				<div class="button" onclick="rego();">ЗАРЕГИСТРИРОВАТЬСЯ!</div>
-			</div>
-		</form>
-		<div class="buttonup" id="uppr" onclick="nach();"><img src="media/up.png"></div>
-		<div class="gran">© 2020 ООО "Рога и Копыта"<a name="start"></a></div>
+	<body>
+			<nav>
+				<a href="1.html">Первая ссыль</a>
+				<a href="2.html">Вторая ссыль</a>
+			</nav>
 	</body>
 </html>

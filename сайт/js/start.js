@@ -1,6 +1,5 @@
-var upper, vxod, reg, r, v, warnc, logv, logr, pasv, pasr, warnev, warner, warnew, regb, vxodb, ch1, ch2, ch3, wt, butr, butv;
+var vxod, reg, r, v, warnc, logv, logr, pasv, pasr, warnev, warner, warnew, regb, vxodb, ch1, ch2, ch3, wt, butr, butv;
 window.onload = function(){
-	upper = document.getElementById("uppr");
 	vxod = document.getElementById("vxod");
 	reg = document.getElementById("reg");
 	r = document.getElementById("r");
@@ -19,21 +18,16 @@ window.onload = function(){
 	wt = document.getElementById("wt");
 	butr = document.getElementById("butr");
 	butv = document.getElementById("butv");
-	window.addEventListener('scroll', scr);
 	window.addEventListener('keydown', checkCaps);
 	logv.addEventListener('input', inpchv);
 	logr.addEventListener('input', inpchr);
 	pasv.addEventListener('input', inpchv);
 	pasr.addEventListener('input', inpchr);
-	scr();
 	regb = false;
 	vxodb = false;
 }
 function kon(){
     window.scrollTo(0, window.innerHeight);
-}
-function nach(){
-    window.scrollTo(0, 0);
 }
 function gen_pas(){
     var password = "";
@@ -95,12 +89,6 @@ function inpchr(event){
 		dat.style.outline = "none black";
 		warner.style.display = "none";
 	}
-}
-function scr() {
-	if (pageYOffset > window.innerHeight / 2)
-		upper.style.display = "inline";
-	else
-		upper.style.display = "none";
 }
 function checkCaps(event) {
     var caps = event.getModifierState && event.getModifierState('CapsLock');

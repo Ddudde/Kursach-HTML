@@ -1,3 +1,7 @@
+body{
+	height: 200vh;
+}
+
 .fullscreen-bg {
 	position: fixed;
 	top: 0;
@@ -215,25 +219,6 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	transform: translate(0%, 30%);
 }
 
-.gran{
-	color: #ff9700;
-	position: absolute;
-	top: 200%;
-	right: 180px;
-	transform: translate(0%, -100%);
-}
-
-.buttonup {
-	user-select: none;
-	cursor: pointer;
-	width: 88px; 
-	height: 118px;
-	position: fixed;
-	bottom: 50px;
-	right: 50px;
-	display: none;
-}
-
 .over{
 	position: absolute;
 	top: 0;
@@ -246,11 +231,9 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 }
 
 .fullscreen-bg__video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	min-height: 700px;
 	min-width: 100%;
-	width: 100%;
+	min-height: 100%;
+	height: auto;
+	width: auto;
 	background-position: center center;
 }
