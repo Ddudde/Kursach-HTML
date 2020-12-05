@@ -12,10 +12,6 @@ body{
 	z-index: -100;
 }
 
-nav{
-	display: none;
-}
-
 .start{
 	color: #ff9700;
 	font-size: 48px;

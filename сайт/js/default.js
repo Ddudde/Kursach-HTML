@@ -1,13 +1,12 @@
-var d1 = document.createElement('img');
-window.onload = function(){
+var d1 = document.createElement('img'), d = document.createElement('div');
+document.addEventListener("DOMContentLoaded", function(){
 	window.addEventListener('scroll', scr);
 	scr();
-	var d = document.createElement('div');
 	d.innerHTML='© 2020 ООО "Рога и Копыта" Все права защищены. Project on <a href="https://github.com/Ddudde/Kursach-HTML" style="color: #ff9700;">github</a>.';
 	d.setAttribute('style', `position: absolute;
 	right: 100px;
 	color: #ff9700;
-	top: ${document.body.scrollHeight}px`);
+	top: ${document.body.scrollHeight-10}px`);
 	document.body.appendChild(d);
 	d1.src = "media/up.png";
 	d1.setAttribute('style', `user-select: none;
@@ -18,7 +17,13 @@ window.onload = function(){
 	display: none;`);
 	d1.setAttribute('onclick', 'nach();');
 	document.body.appendChild(d1);
-}
+	window.onresize = function(event) {
+		d.setAttribute('style', `position: absolute;
+		right: 100px;
+		color: #ff9700;
+		top: ${document.body.scrollHeight-10}px`);
+	};
+});
 function nach(){
     window.scrollTo(0, 0);
 }

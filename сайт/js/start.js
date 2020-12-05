@@ -48,7 +48,7 @@ function inpchv(event){
 	var dat = event.target;
 	if (dat.validity.patternMismatch || dat.value.length == 0) {
 		dat.style.animation = "but 1s ease infinite";
-		setTimeout(function () {dat.style.animation = "0"}, 1000)
+		setTimeout(function () {dat.style.animation = 'none'}, 1000)
 		dat.style.outline = "solid red";
 		warnev.style.display = "inline";
 	} else {
