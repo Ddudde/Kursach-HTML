@@ -24,6 +24,9 @@ export function init() {
 	camera.position.set( 0, 10, 10 );
 	scene = new THREE.Scene();
 	stats = new Stats();
+	stats.dom.setAttribute('style',`position: absolute;
+	top: 70px;
+	left: 0;`);
 	container.appendChild( stats.dom );
 	const ambientLight = new THREE.AmbientLight( 0xcccccc, 0.4 );
 	camera.add( ambientLight );
