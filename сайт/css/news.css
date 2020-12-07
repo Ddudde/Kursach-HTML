@@ -80,10 +80,10 @@ body{
 }
 
 .logimg{
-	font-size: 24px;
 	top: 0;
 	right: 10px;
 	position:fixed;
+	font-size: 24px;
 	cursor: pointer;
 	color: #ff9700;
 	text-align: center;
@@ -103,6 +103,7 @@ body{
 
 #limg{
 	position: relative;
+	margin-right: 5px;
 	width: 32px;
 	height: 32px;
 	transform: translate(0%, 25%);
@@ -145,4 +146,51 @@ body{
 	margin:0px 10px;
 	width:114px;
 	float:left;
+}
+
+ul {
+	list-style: none;
+	display: block;
+	margin:0px;
+	padding:0px;
+}
+
+li{
+	text-align: center;
+	padding: 10px;
+	border: 1px outset gray;
+	cursor: pointer;
+}
+
+li > a {
+	text-decoration: none;
+	color: #ff9700;
+}
+
+li > a:hover{
+	color: #ffbf28;
+	text-shadow: 0 0 1vw #FFFFFF;
+}
+
+li > a:active{
+	color: #d76f00;
+}
+
+div.posl{
+	position: fixed;
+	width: 150px;
+	top: 40px;
+	height: 100px;
+	right: 0px;
+	display: none;
+}
+
+ul.ssubmenuu {
+	position: fixed;
+	top: 58px;
+	color: #ff9700;
+}
+
+nav.panel > div:hover > div.posl {
+	display: block;
 }

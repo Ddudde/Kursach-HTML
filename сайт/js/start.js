@@ -66,7 +66,11 @@ function vxo(){
 			vxodb &= al[1] == pasv.value;
 	}
 	if(vxodb)
+	{
 		warnew.style.display = 'none';
+		console.log('vxod');
+		window.location.href = 'home.html' + window.location.hash;
+	}
 	else
 		warnew.style.display = 'inline';
 }

@@ -6,7 +6,7 @@ import * as GPU from './3d/models/video/module.js';
 import * as PZU from './3d/models/disk/module.js';
 import * as KORP from './3d/models/korp/module.js';
 import * as BLOCK from './3d/models/block/module.js';
-var hello, hellob, her, logimg, limg;
+var hello, hellob, her, logimg, limg, eimg;
 let dialogi = 0;
 let kit = [CPU, MATH, KULER, OZU, GPU, PZU, KORP, BLOCK];
 document.addEventListener("DOMContentLoaded",function(){
@@ -14,7 +14,29 @@ document.addEventListener("DOMContentLoaded",function(){
 	hellob = document.getElementById("hellob");
 	her = document.getElementById("her");
 	logimg = document.getElementById("logimg");
+	let hsh = window.location.hash.split(";");
+	var ch1 = new Image();
+	ch1.src = "media/ls-icon1.png";
+	ch1.id = 'limg';
+	var ch2 = new Image();
+	ch2.src = "media/ls-icon2.png";
+	ch2.id = 'limg';
+	var ch3 = new Image();
+	ch3.src = "media/ls-icon3.png";
+	ch3.id = 'limg';
+	var edit = new Image();
+	edit.src = "media/edit.png";
+	edit.id = 'eimg';
+	let icons = [ch1, ch2, ch3];
+	logimg.innerHTML = '';
+	logimg.appendChild(icons[parseInt(hsh[2].split('=')[1])-1]);
+	logimg.innerHTML += hsh[0].split('=')[1];
+	logimg.appendChild(edit);
 	limg = document.getElementById("limg");
+	eimg = document.getElementById("eimg");
+	for(let blocks of document.querySelectorAll( "a" )){
+		blocks.href += window.location.hash;
+	}
 });
 
 window.chhello = function chhello(){
