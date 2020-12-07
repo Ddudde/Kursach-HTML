@@ -12,6 +12,7 @@ body{
 }
 
 .nov{
+	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
 	font-size: 24px;
@@ -33,6 +34,7 @@ body{
 }
 
 .kon{
+	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
 	font-size: 24px;
@@ -41,8 +43,8 @@ body{
 	margin: 15px 5px;
 	position: fixed;
 	top: 0;
-	left: 50%;
-	transform: translate(-50%, 0%);
+	left: 33%;
+	transform: translate(-33%, 0%);
 }
 
 .kon:hover{
@@ -51,6 +53,29 @@ body{
 }
 
 .kon:active{
+	color: #d76f00;
+}
+
+.glav{
+	text-decoration: none;
+	cursor: pointer;
+	color: #ff9700;
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+	margin: 15px 5px;
+	position: fixed;
+	top: 0;
+	left: 66%;
+	transform: translate(-66%, 0%);
+}
+
+.glav:hover{
+	color: #ffbf28;
+	text-shadow: 0 0 1vw #FFFFFF;
+}
+
+.glav:active{
 	color: #d76f00;
 }
 
@@ -78,6 +103,7 @@ body{
 
 #limg{
 	position: relative;
+	margin-right: 5px;
 	width: 32px;
 	height: 32px;
 	transform: translate(0%, 25%);
@@ -87,4 +113,194 @@ body{
 	position: relative;
 	margin-left: 10px;
 	transform: translate(0%, 5%);
+}
+
+
+ul {
+	list-style: none;
+	display: block;
+	margin:0px;
+	padding:0px;
+}
+
+li{
+	text-align: center;
+	padding: 10px;
+	border: 1px outset gray;
+	cursor: pointer;
+}
+
+li > a {
+	text-decoration: none;
+	color: #ff9700;
+}
+
+li > a:hover{
+	color: #ffbf28;
+	text-shadow: 0 0 1vw #FFFFFF;
+}
+
+li > a:active{
+	color: #d76f00;
+}
+
+div.posl{
+	position: fixed;
+	width: 150px;
+	top: 40px;
+	height: 100px;
+	right: 0px;
+	display: none;
+}
+
+ul.ssubmenuu {
+	position: fixed;
+	top: 58px;
+	color: #ff9700;
+}
+
+nav.panel > div:hover > div.posl {
+	display: block;
+}
+
+#warner{
+	top: 200px;
+	right:520px;
+}
+
+.reg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(245, 246, 247);
+	border-radius: 4px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-right: 12px;
+	margin-top: 25px;
+}
+
+input[type="text"], input[type="password"] {
+	border-radius: 4px;
+	background-color: #f5f6f7;
+	box-shadow: 0 1px white, inset 0 2px 2px rgba(0, 0, 0, 0.1);
+	border: 1px solid #b1b3b8;
+	font-size: 18px;
+	height: 57px;
+	margin-left: 12px;
+	padding-left: 12px;
+	width: 248px;
+	transition: all 0.1s ease;
+	position:relative;
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder{
+	user-select: none;
+}
+
+.rand{
+	user-select: none;
+	background: #c14503;
+	border: 0;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	margin-left: 10px;
+	font-size: 16px;
+	font-weight: bolder;
+	height: 52px;
+	padding: 12px 12px;
+	text-shadow: 2px 2px 0px black;
+	box-shadow: inset 0 -5px 2px rgba(255, 255, 255, 0.2);
+}
+
+.rand:hover
+{
+	text-shadow: none;
+	box-shadow: 0 0 5px 5px #B8860B, inset 0 -50px 2px rgba(255, 255, 255, 0.2);
+}
+
+.rand:active
+{
+	text-shadow: none;
+	box-shadow: 0 0 10px 10px #B8860B, inset 0 -50px 2px rgba(0, 0, 0, 0.2);
+}
+
+.pass{
+	margin-top: 9px;
+	margin-bottom: 9px;
+}
+
+.logo{
+	user-select: none;
+	color: #c14503;
+	font-size: 24px;
+	font-weight: bolder;
+	margin-left: 12px;
+	margin-bottom: 9px;
+}
+
+.warn{
+	user-select: none;
+	display: none;
+	color: #c14503;
+	font-weight: bolder;
+	margin-left: 12px;
+	position: relative;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.warne{
+	user-select: none;
+	display: none;
+	box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+	background-color: rgba(245, 246, 247, 0.9);
+	border-radius: 4px;
+	padding: 9px;
+	width: 150px;
+	color: #c14503;
+	font-weight: bolder;
+	position: absolute;
+}
+
+.warnimg{
+	position: relative;
+	transform: translate(0%, 30%);
+}
+
+.randimg{
+	position: relative;
+	transform: translate(0%, 30%);
+}
+
+.button {
+	user-select: none;
+	background: #c14503;
+	border: 0;
+	width: 200px;
+	text-align: center;
+	border-radius: 5px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 287px;
+	padding: 16px 12px;
+	position: relative;
+	text-shadow: 2px 2px 0px black;
+	box-shadow: inset 0 -5px 2px rgba(255, 255, 255, 0.2);
+}
+
+.button:hover
+{
+	text-shadow: 0 0 0;
+	box-shadow: 0 0 5px 5px #B8860B, inset 0 -50px 2px rgba(255, 255, 255, 0.2);
+}
+
+.button:active
+{
+	text-shadow: 0 0 0;
+	box-shadow: 0 0 10px 10px #B8860B, inset 0 -50px 2px rgba(0, 0, 0, 0.2);
 }

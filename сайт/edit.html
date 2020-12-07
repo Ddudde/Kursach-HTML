@@ -7,22 +7,48 @@
 		<link rel="shortcut icon" href="media/favicon.png">
 		<link rel="stylesheet" href="css/edit.css">
 		<script src="js/default.js"></script>
+		<script src="js/edit.js"></script>
 	</head>
 	<body>
 		<nav class="panel" id="her">
-			<div class="nov" id="nov">
+			<a href="news.html" class="nov" id="nov">
 				Новости
-			</div>
-			<div class="kon" id="kon">
+			</a>
+			<a href="contacts.html" class="kon" id="kon">
 				Контакты
-			</div>
-			<div class="logimg" id="logimg">
-				<img id="limg" src="media/ls-icon1.png">User<img id="eimg" src="media/edit.png">
+			</a>
+			<a href="home.html" class="glav" id="glav">
+				Главная
+			</a>
+			<div>
+				<div class="logimg" id="logimg">
+					<img id="limg" src="media/ls-icon1.png">User<img id="eimg" src="media/edit.png">
+				</div>
+				<div class="posl">
+					<ul class="ssubmenuu">
+						<li><a href="edit.html">Редактировать профиль</a></li>
+						<li><a href="start.html">Выход</a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
-		<div class="hello" id="hello">
-			Вы успешно авторизовались.<br>
-			<span class="hellob" id="hellob" onclick="chhello();">Окей!</span>
+		<div class="reg" id="reg">
+			<div class="logo">
+				<p>Выберите иконку для профиля:</p>
+				<input id="ch1" name="ico" type="radio" value="1" checked><img src="media/ls-icon1.png">
+				<input id="ch2" name="ico" type="radio" value="2"><img src="media/ls-icon2.png">
+				<input id="ch3" name="ico" type="radio" value="3"><img src="media/ls-icon3.png">
+			</div>
+			<div>
+				<div class="warne" id="warner"><img src="media/warning.png" class="warnimg">Внимание! <p id="wt">Допустимы только латинница и цифры</p></div>
+				<input class="login" type="text" placeholder="Логин" id="logr" required pattern="^[a-zA-Z0-9]+$">
+				<span class="warn" id="warnc"><img src="media/warning.png" class="warnimg">Включён Caps Lock!</span>
+			</div>
+			<div>
+				<input class="pass" type="password" placeholder="Пароль" id="pasr" required pattern="^[a-zA-Z0-9]+$">
+				<span class="rand" onclick="gen_pas();"><img src="media/random.png" class="randimg">Случайный пароль</span>
+			</div>
+			<div class="button" onclick="chang();">ИЗМЕНИТЬ ДАННЫЕ!</div>
 		</div>
 	</body>
 </html>
