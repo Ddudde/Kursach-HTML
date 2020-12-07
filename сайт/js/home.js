@@ -1,13 +1,14 @@
 import * as CPU from './3d/models/CPU/module.js';
-//import * as MATH from './3d/models/matb/module.js';
-//import * as KULER from './3d/models/kuler/module.js';
-//import * as OZU from './3d/models/opera/module.js';
-//import * as GPU from './3d/models/video/module.js';
-//import * as PZU from './3d/models/disk/module.js';
-//import * as KORP from './3d/models/korp/module.js';
-//import * as BLOCK from './3d/models/block/module.js';
+import * as MATH from './3d/models/matb/module.js';
+import * as KULER from './3d/models/kuler/module.js';
+import * as OZU from './3d/models/opera/module.js';
+import * as GPU from './3d/models/video/module.js';
+import * as PZU from './3d/models/disk/module.js';
+import * as KORP from './3d/models/korp/module.js';
+import * as BLOCK from './3d/models/block/module.js';
 var hello, hellob, her, logimg, limg;
 let dialogi = 0;
+let kit = [CPU, MATH, KULER, OZU, GPU, PZU, KORP, BLOCK];
 document.addEventListener("DOMContentLoaded",function(){
 	hello = document.getElementById("hello");
 	hellob = document.getElementById("hellob");
@@ -15,18 +16,6 @@ document.addEventListener("DOMContentLoaded",function(){
 	logimg = document.getElementById("logimg");
 	limg = document.getElementById("limg");
 });
-
-function loadScript(url)
-{
-    // Adding the script tag to the head as suggested before
-    var head = document.head;
-    var script = document.createElement('script');
-    script.type = 'module';
-    script.src = url;
-
-    // Fire the loading
-    head.appendChild(script);
-}
 
 /*function chhello(){
 	hello.innerHTML = 'Давайте разберёмся с комплектующими вместе. Мы заботимся о своих покупателях. И поэтому не желаем чтобы вы обманулись.<br>';
@@ -98,14 +87,13 @@ window.chhello = function chhello(){
 	if(dialogi>0)
 	{
 		console.log('дошло');
+		kit[dialogi-1].destroy();
 		//var threeDkit = document.getElementById(models[dialogi-1]);
 		//threeDkit.destroy();
 		//document.head.removeChild(threeDkit);
 		//threeDkit = null;
 	}
-	CPU.init();
-	//var threeDkit = document.getElementById(models[dialogi]);
-	//threeDkit.init();
+	kit[dialogi].init();
 	console.log('передошло');
 	hello.appendChild(hellob);
 	hello.style.display = 'inline-block';

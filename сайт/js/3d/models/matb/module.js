@@ -6,11 +6,16 @@ import { OBJLoader2 } from "../../OBJLoader2.js";
 import { MtlObjBridge } from "../../obj2/bridge/MtlObjBridge.js";
 import { OrbitControls } from '../../OrbitControls.js';
 
-let camera, scene, renderer, stats;
+let camera, scene, renderer, stats, container, anim;
 
-function init() {
-	animate();
-	const container = document.createElement( 'div' );
+export function Init()
+{
+	console.log('Init');
+}
+
+export function init() {
+	anim = true;
+	container = document.createElement( 'div' );
 	document.body.appendChild( container );
 	container.setAttribute('style',`position: absolute;
 	top: 0;
@@ -26,13 +31,6 @@ function init() {
 	directionalLight.position.set( 0, 50, 0 );
 	camera.add( directionalLight );
 	scene.add( camera );
-	const onProgress = function ( xhr ) {
-		if ( xhr.lengthComputable ) {
-		const percentComplete = xhr.loaded / xhr.total * 100;
-		console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
-		}
-	};
-	const onError = function () { };
 	const modelName = 'kit';
 	const objLoader2 = new OBJLoader2();
 	const callbackOnLoad = function ( object3d ) {
@@ -59,7 +57,20 @@ function init() {
 	controls.maxDistance = 10;
 	controls.update();
 	window.addEventListener( 'resize', onWindowResize, false );
-}
+	animate();
+};
+
+export function destroy(){
+	anim = false;
+	window.removeEventListener( 'resize', onWindowResize, false );
+	document.body.removeChild(container);
+	scene = null;
+	renderer = null;
+	camera = null;
+	stats = null;
+	anim = null;
+	container = null;
+};
 
 function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
@@ -67,19 +78,9 @@ function onWindowResize() {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 }
 
-function destroy(){
-	window.removeEventListener( 'resize', onWindowResize, false );
-	cancelAnimationFrame(animate);
-	document.body.removeChild(container);
-	camera = null;
-	scene = null;
-	renderer = null;
-	stats = null;
-	anim = null;
-	container = null;
-}
-
 function animate() {
+	if(!anim)
+		return;
 	requestAnimationFrame( animate );
 	render();
 	stats.update();

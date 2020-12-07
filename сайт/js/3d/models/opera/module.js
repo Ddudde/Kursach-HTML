@@ -6,11 +6,16 @@ import { OBJLoader2 } from "../../OBJLoader2.js";
 import { MtlObjBridge } from "../../obj2/bridge/MtlObjBridge.js";
 import { OrbitControls } from '../../OrbitControls.js';
 
-let camera, scene, renderer, stats;
+let camera, scene, renderer, stats, container, anim;
 
-function init() {
-	animate();
-	const container = document.createElement( 'div' );
+export function Init()
+{
+	console.log('Init');
+}
+
+export function init() {
+	anim = true;
+	container = document.createElement( 'div' );
 	document.body.appendChild( container );
 	container.setAttribute('style',`position: absolute;
 	top: 0;
@@ -26,13 +31,6 @@ function init() {
 	directionalLight.position.set( 0, 50, 0 );
 	camera.add( directionalLight );
 	scene.add( camera );
-	const onProgress = function ( xhr ) {
-		if ( xhr.lengthComputable ) {
-		const percentComplete = xhr.loaded / xhr.total * 100;
-		console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
-		}
-	};
-	const onError = function () { };
 	const modelName = 'kit';
 	const objLoader2 = new OBJLoader2();
 	const callbackOnLoad = function ( object3d ) {
@@ -46,30 +44,25 @@ function init() {
 		objLoader2.setModelName( modelName );
 		objLoader2.setLogging( true, true );
 		objLoader2.addMaterials( MtlObjBridge.addMaterialsFromMtlLoader( mtlParseResult ), true );
-		objLoader2.load( './js/3d/models/opera/DDR___SDRAM.obj', callbackOnLoad, null, null, null );
+		objLoader2.load( './js/3d/models/opera/RAM.obj', callbackOnLoad, null, null, null );
 	};
 	const mtlLoader = new MTLLoader();
-	mtlLoader.load( './js/3d/models/opera/DDR___SDRAM.mtl', onLoadMtl );
+	mtlLoader.load( './js/3d/models/opera/RAM.mtl', onLoadMtl );
 	renderer = new THREE.WebGLRenderer({ alpha: true });
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	container.appendChild( renderer.domElement );
 	const controls = new OrbitControls( camera, renderer.domElement);
-	controls.minDistance = 20;
-	controls.maxDistance = 20;
+	controls.minDistance = 5;
+	controls.maxDistance = 5;
 	controls.update();
 	window.addEventListener( 'resize', onWindowResize, false );
-}
+	animate();
+};
 
-function onWindowResize() {
-	camera.aspect = window.innerWidth / window.innerHeight;
-	camera.updateProjectionMatrix();
-	renderer.setSize( window.innerWidth, window.innerHeight );
-}
-
-function destroy(){
+export function destroy(){
 	window.removeEventListener( 'resize', onWindowResize, false );
-	cancelAnimationFrame(animate);
+	anim = false;
 	document.body.removeChild(container);
 	camera = null;
 	scene = null;
@@ -77,9 +70,17 @@ function destroy(){
 	stats = null;
 	anim = null;
 	container = null;
+};
+
+function onWindowResize() {
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize( window.innerWidth, window.innerHeight );
 }
 
 function animate() {
+	if(!anim)
+		return;
 	requestAnimationFrame( animate );
 	render();
 	stats.update();

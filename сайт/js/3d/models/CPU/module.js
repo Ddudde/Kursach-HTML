@@ -6,7 +6,7 @@ import { OBJLoader2 } from "../../OBJLoader2.js";
 import { MtlObjBridge } from "../../obj2/bridge/MtlObjBridge.js";
 import { OrbitControls } from '../../OrbitControls.js';
 
-let camera, scene, renderer, stats, container;
+let camera, scene, renderer, stats, container, anim;
 
 export function Init()
 {
@@ -14,6 +14,7 @@ export function Init()
 }
 
 export function init() {
+	anim = true;
 	container = document.createElement( 'div' );
 	document.body.appendChild( container );
 	container.setAttribute('style',`position: absolute;
@@ -61,11 +62,11 @@ export function init() {
 
 export function destroy(){
 	window.removeEventListener( 'resize', onWindowResize, false );
-	cancelAnimationFrame(animate);
+	anim = false;
 	document.body.removeChild(container);
-	camera = null;
 	scene = null;
 	renderer = null;
+	camera = null;
 	stats = null;
 	anim = null;
 	container = null;
@@ -78,6 +79,8 @@ function onWindowResize() {
 }
 
 function animate() {
+	if(!anim)
+		return;
 	requestAnimationFrame( animate );
 	render();
 	stats.update();
