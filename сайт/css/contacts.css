@@ -4,10 +4,12 @@ body{
 }
 
 .panel{
+	user-select: none;
 	position:fixed;
-	left:0;
+	left: 0;
+	top: 0;
 	width: 100vw;
-	margin-top: 50px;
+	height: 50px;
 	border-bottom: 1px solid gray;
 }
 
@@ -15,13 +17,12 @@ body{
 	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
-	font-size: 24px;
-	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin: 15px 5px;
-	position: fixed;
-	top: 0;
-	left: 10px;
+	display: inline-block;
+	position: absolute;
+	line-height:50px;
+	left: 5%;
 }
 
 .nov:hover{
@@ -37,14 +38,12 @@ body{
 	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
-	font-size: 24px;
-	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin: 15px 5px;
-	position: fixed;
-	top: 0;
-	left: 33%;
-	transform: translate(-33%, 0%);
+	display: inline-block;
+	position: absolute;
+	line-height:50px;
+	left: 30%;
 }
 
 .kon:hover{
@@ -60,14 +59,12 @@ body{
 	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
-	font-size: 24px;
-	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin: 15px 5px;
-	position: fixed;
-	top: 0;
-	left: 66%;
-	transform: translate(-66%, 0%);
+	display: inline-block;
+	position: absolute;
+	line-height:50px;
+	left: 60%;
 }
 
 .glav:hover{
@@ -79,17 +76,23 @@ body{
 	color: #d76f00;
 }
 
+.poslogimg{
+	display: inline-block;
+	position: absolute;
+	right: 5%;
+	line-height:50px;
+}
+
+#tlog{
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .logimg{
-	font-size: 24px;
-	top: 0;
-	right: 10px;
-	position:fixed;
+	font-size: 2vw;
 	cursor: pointer;
 	color: #ff9700;
-	text-align: center;
 	font-weight: bold;
-	margin-top: 5px;
-	margin-right: 5px;
 }
 
 .logimg:hover{
@@ -102,26 +105,31 @@ body{
 }
 
 #limg{
-	position: relative;
 	margin-right: 5px;
 	width: 32px;
 	height: 32px;
-	transform: translate(0%, 25%);
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #eimg{
-	position: relative;
 	margin-left: 10px;
-	transform: translate(0%, 5%);
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .center_colum {
-	width:500px;
+	width: 45vw;
 	position: absolute;
 	margin-top: 10px;
 	top: 70px;
 	left: 50%;
 	transform: translate(-50%, 0%);
+}
+
+.imk{
+	width: 60vw;
+	height: 30vw;
 }
 
 .center_colum p a{
@@ -151,6 +159,7 @@ li{
 	padding: 10px;
 	border: 1px outset gray;
 	cursor: pointer;
+	line-height: normal;
 }
 
 li > a {
@@ -178,10 +187,10 @@ div.posl{
 
 ul.ssubmenuu {
 	position: fixed;
-	top: 58px;
+	top: 50px;
 	color: #ff9700;
 }
 
-nav.panel > div:hover > div.posl {
+.panel > .poslogimg:hover > .posl {
 	display: block;
 }

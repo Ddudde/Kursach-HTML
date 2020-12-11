@@ -20,7 +20,8 @@ export function init() {
 	container.setAttribute('style',`position: absolute;
 	top: 0;
 	left: 0;`);
-	camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	let rat = window.innerWidth / window.innerHeight;
+	camera = new THREE.PerspectiveCamera( 75, rat, 0.1, 1000 );
 	camera.position.set( 0, 10, 10 );
 	scene = new THREE.Scene();
 	stats = new Stats();
@@ -56,8 +57,8 @@ export function init() {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	container.appendChild( renderer.domElement );
 	const controls = new OrbitControls( camera, renderer.domElement);
-	controls.minDistance = 5;
-	controls.maxDistance = 5;
+	controls.minDistance = 5 * 1/rat;
+	controls.maxDistance = 5 * 1/rat;
 	controls.update();
 	window.addEventListener( 'resize', onWindowResize, false );
 	animate();

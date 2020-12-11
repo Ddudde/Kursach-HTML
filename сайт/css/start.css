@@ -14,7 +14,7 @@ body{
 
 .start{
 	color: #ff9700;
-	font-size: 48px;
+	font-size: 3vmax;
 	text-align: center;
 	font-weight: bold;
 	position: absolute;
@@ -43,7 +43,7 @@ body{
 .help, .helpa{
 	user-select: none;
 	color: #FFFFFF;
-	font-size: 24px;
+	font-size: 2vmax;
 	font-weight: bold;
 	text-align: center;
 }
@@ -63,7 +63,7 @@ body{
 	padding-top: 9px;
 	padding-bottom: 9px;
 	padding-right: 12px;
-	margin-top: 25px;
+	margin-top: 3vmax;
 	transition: all 1s ease;
 }
 
@@ -73,15 +73,15 @@ body{
 }
 
 input[type="text"], input[type="password"] {
-	border-radius: 4px;
+	border-radius: 0.5vmax;
 	background-color: #f5f6f7;
 	box-shadow: 0 1px white, inset 0 2px 2px rgba(0, 0, 0, 0.1);
 	border: 1px solid #b1b3b8;
-	font-size: 18px;
-	height: 57px;
-	margin-left: 12px;
-	padding-left: 12px;
-	width: 248px;
+	font-size: 2.2vmax;
+	height: 7vmax;
+	margin-left: 1.5vmax;
+	padding-left: 1.5vmax;
+	width: 30vw;
 	transition: all 0.1s ease;
 	position:relative;
 }
@@ -100,13 +100,15 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	user-select: none;
 	background: #c14503;
 	border: 0;
-	border-radius: 5px;
+	border-radius: 0.6vmax;
 	color: #FFFFFF;
 	cursor: pointer;
-	font-size: 16px;
+	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin-left: 287px;
-	padding: 16px 12px;
+	margin-top: 9px;
+	margin-left: 34.3vw;
+	padding: 1.5vmax 1.5vmax;
 	position: relative;
 	text-shadow: 2px 2px 0px black;
 	box-shadow: inset 0 -5px 2px rgba(255, 255, 255, 0.2);
@@ -131,11 +133,10 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	border-radius: 5px;
 	color: white;
 	cursor: pointer;
-	margin-left: 10px;
-	font-size: 16px;
-	font-weight: bolder;
+	margin-left: 9px;
+	font-size: 2vmin;
 	height: 52px;
-	padding: 12px 12px;
+	padding: 1vw 1vw;
 	text-shadow: 2px 2px 0px black;
 	box-shadow: inset 0 -5px 2px rgba(255, 255, 255, 0.2);
 }
@@ -154,16 +155,20 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 
 .pass{
 	margin-top: 9px;
-	margin-bottom: 9px;
 }
 
 .logo{
 	user-select: none;
 	color: #c14503;
-	font-size: 24px;
+	font-size: 3vw;
 	font-weight: bolder;
 	margin-left: 12px;
 	margin-bottom: 9px;
+}
+
+.logoi{
+	width: 8vw;
+	height: 8vw;
 }
 
 .warn{
@@ -171,7 +176,7 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	display: none;
 	color: #c14503;
 	font-weight: bolder;
-	margin-left: 12px;
+	margin-left: 1.5vmax;
 	position: relative;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -184,25 +189,26 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	background-color: rgba(245, 246, 247, 0.9);
 	border-radius: 4px;
 	padding: 9px;
-	width: 150px;
+	font-size: 2vw;
+	width: 18vw;
 	color: #c14503;
 	font-weight: bolder;
-	position: absolute;
+	position: fixed;
 }
 
 #warnev{
-	top: 25px;
-	right: 380px;
+	top: 10px;
+	right: 10px;
 }
 
 #warner{
-	top: 200px;
-	right:520px;
+	top: 10px;
+	right: 10px;
 }
 
 #warnew{
-	top: 25px;
-	right: 380px;
+	top: 10px;
+	right: 10px;
 }
 
 .warnimg{
@@ -213,6 +219,8 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 .randimg{
 	position: relative;
 	transform: translate(0%, 30%);
+	width: 4vmin;
+	height: 4vmin;
 }
 
 .over{

@@ -6,7 +6,7 @@ import * as GPU from './3d/models/video/module.js';
 import * as PZU from './3d/models/disk/module.js';
 import * as KORP from './3d/models/korp/module.js';
 import * as BLOCK from './3d/models/block/module.js';
-var hello, hellob, her, logimg, limg, eimg;
+var hello, hellob, her, logimg, limg, eimg, poslogimg;
 let dialogi = 0;
 let kit = [CPU, MATH, KULER, OZU, GPU, PZU, KORP, BLOCK];
 document.addEventListener("DOMContentLoaded",function(){
@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded",function(){
 	hellob = document.getElementById("hellob");
 	her = document.getElementById("her");
 	logimg = document.getElementById("logimg");
+	poslogimg = document.getElementById("poslogimg");
 	let hsh = window.location.hash.split(";");
 	var ch1 = new Image();
 	ch1.src = "media/ls-icon1.png";
@@ -30,7 +31,10 @@ document.addEventListener("DOMContentLoaded",function(){
 	let icons = [ch1, ch2, ch3];
 	logimg.innerHTML = '';
 	logimg.appendChild(icons[parseInt(hsh[2].split('=')[1])-1]);
-	logimg.innerHTML += hsh[0].split('=')[1];
+	var tlog = document.createElement("span");
+	tlog.id = 'tlog';
+	tlog.innerHTML = hsh[0].split('=')[1];
+	logimg.appendChild(tlog);
 	logimg.appendChild(edit);
 	limg = document.getElementById("limg");
 	eimg = document.getElementById("eimg");
@@ -51,34 +55,37 @@ window.start = function start(){
 	hellob.style.display = 'none';
 	her.setAttribute('style', `display: inline-block;
 	animation: hra 1s linear infinite`);
-	setTimeout(function () {her.setAttribute('style', `display: inline-block;
-	animation: void 0; width: 100vw`)}, 975);
-	logimg.setAttribute('style', `display: inline-block;
-	animation: stlogimga 2s linear infinite`);
-	setTimeout(function () {logimg.setAttribute('style', `display: inline-block;
-	animation: logimga 2s linear infinite`);
-	setTimeout(function () {logimg.setAttribute('style', `display: inline-block;
-	animation: void 0;
-	font-size: 24px;
-	top: 0;
-	left: auto;
-	right: 10px;
-	transform: translate(0%, 0%);
-	position:fixed;
-	cursor: pointer;`)}, 1975);
-	limg.setAttribute('style', `display: inline-block;
-	animation: limga 2s linear infinite`);
-	setTimeout(function () {limg.setAttribute('style', `display: inline-block;
-	animation: void 0;
-	width: 32px;
-	height: 32px;
-	transform: translate(0%, 25%);`);
-	init();}, 1975)}, 1975);
+	setTimeout(function () {
+		her.setAttribute('style', `display: inline-block;
+		animation: void 0; width: 100vw`);
+	}, 975);
+	logimg.setAttribute('style', `animation: stlogimga 2s linear infinite`);
+	setTimeout(function () {
+		logimg.setAttribute('style', `animation: logimga 2s linear infinite`);
+		//poslogimg.setAttribute('style', `animation: posl 2s linear infinite`);
+		setTimeout(function () {
+			logimg.setAttribute('style', `animation: void 0;
+			font-size: 2vw;
+			cursor: pointer;`);
+			/*poslogimg.setAttribute('style', `animation: void 0;
+			top: auto;
+			left: auto;
+			right: 5%;
+			position:absolute;`);*/
+		}, 1975);
+		limg.setAttribute('style', `animation: limga 2s linear infinite`);
+		setTimeout(function () {
+			limg.setAttribute('style', `animation: void 0;
+			width: 32px;
+			height: 32px;`);
+			init();
+		}, 1975)
+	}, 1975);
 }
 
 function init(){
 	hello.innerHTML = 'Итак, вы решились на самостоятельную сборку домашнего компьютера из комплектующих. Поздравляем! Это не только интересно, но и более экономично, чем покупать готовую машину. Если с задачей подбора «железа» вы сталкиваетесь впервые, то вам обязательно помогут наши советы. Мы расскажем, из чего состоит компьютер, и дадим рекомендации по выбору процессора, дисков, памяти и всех остальных ключевых элементов вашего будущего ПК.<br>';
-	hello.setAttribute('style', 'font-size: 24px');
+	hello.setAttribute('style', 'font-size: 2vw');
 	hellob.setAttribute('style', 'margin-top: 10px');
 	hellob.innerHTML = 'Начнём!';
 	hellob.setAttribute('onclick', 'dialog();');
@@ -102,18 +109,18 @@ window.dialog = function dialog(){
 	,`Плюс есть пара дополнительных вещей. Если вы планируете разместить в корпусе сразу несколько HDD или SSD, то стоит убедиться, что вам хватит кабелей, с помощью которых они подключаются к материнской плате. Обычно один-два включают в комплект поставки корпуса. И ещё вам обязательно нужна будет термопаста – вязкая субстанция, которую вы аккуратно нанесёте на верхнюю часть процессора, прежде чем окончательно закрепить его на материнской плате специальной крышкой. Чаще всего достаточное её количество включено в комплект поставки кулера для процессора, но такая паста не всегда бывает качественной.`
 	,`Вы ознакомленны с базовыми знаниями. Теперь вас будет намного сложнее обмануть! Удачи и хороших вам покупок.`];
 	hello.innerHTML = dialogs[dialogi] + '<br>';
-	hello.setAttribute('style', 'font-size: 24px;');
+	hello.setAttribute('style', 'font-size: 2vw;');
 	hellob.setAttribute('style', 'margin-top: 10px');
 	hellob.innerHTML = 'Далее!';
 	if(dialogi>1 && dialogi < 10)
 	{
-		hello.setAttribute('style', 'font-size: 24px; z-index: 1; left: auto; margin-left: 10px; transform: translate(0%, -50%); width: 400px;');
+		hello.setAttribute('style', 'font-size: 2vw; z-index: 1; left: auto; margin-left: 10px; transform: translate(0%, -50%); width: 25vw;');
 		kit[dialogi-2].init();
 	}
 	if(dialogi>2 && dialogi < 11)
 		kit[dialogi-3].destroy();
 	if(dialogi>9)
-		hello.setAttribute('style', 'font-size: 24px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);');
+		hello.setAttribute('style', 'font-size: 2vw; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);');
 	if(dialogi<11)
 		hello.appendChild(hellob);
 	hello.style.display = 'inline-block';

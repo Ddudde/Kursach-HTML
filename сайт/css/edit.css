@@ -4,10 +4,12 @@ body{
 }
 
 .panel{
+	user-select: none;
 	position:fixed;
-	left:0;
+	left: 0;
+	top: 0;
 	width: 100vw;
-	margin-top: 50px;
+	height: 50px;
 	border-bottom: 1px solid gray;
 }
 
@@ -15,13 +17,12 @@ body{
 	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
-	font-size: 24px;
-	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin: 15px 5px;
-	position: fixed;
-	top: 0;
-	left: 10px;
+	display: inline-block;
+	position: absolute;
+	line-height:50px;
+	left: 5%;
 }
 
 .nov:hover{
@@ -37,14 +38,12 @@ body{
 	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
-	font-size: 24px;
-	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin: 15px 5px;
-	position: fixed;
-	top: 0;
-	left: 33%;
-	transform: translate(-33%, 0%);
+	display: inline-block;
+	position: absolute;
+	line-height:50px;
+	left: 30%;
 }
 
 .kon:hover{
@@ -60,14 +59,12 @@ body{
 	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
-	font-size: 24px;
-	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin: 15px 5px;
-	position: fixed;
-	top: 0;
-	left: 66%;
-	transform: translate(-66%, 0%);
+	display: inline-block;
+	position: absolute;
+	line-height:50px;
+	left: 60%;
 }
 
 .glav:hover{
@@ -79,17 +76,23 @@ body{
 	color: #d76f00;
 }
 
+.poslogimg{
+	display: inline-block;
+	position: absolute;
+	right: 5%;
+	line-height:50px;
+}
+
+#tlog{
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .logimg{
-	font-size: 24px;
-	top: 0;
-	right: 10px;
-	position:fixed;
+	font-size: 2vw;
 	cursor: pointer;
 	color: #ff9700;
-	text-align: center;
 	font-weight: bold;
-	margin-top: 5px;
-	margin-right: 5px;
 }
 
 .logimg:hover{
@@ -102,19 +105,18 @@ body{
 }
 
 #limg{
-	position: relative;
 	margin-right: 5px;
 	width: 32px;
 	height: 32px;
-	transform: translate(0%, 25%);
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #eimg{
-	position: relative;
 	margin-left: 10px;
-	transform: translate(0%, 5%);
+	display: inline-block;
+	vertical-align: middle;
 }
-
 
 ul {
 	list-style: none;
@@ -128,6 +130,7 @@ li{
 	padding: 10px;
 	border: 1px outset gray;
 	cursor: pointer;
+	line-height: normal;
 }
 
 li > a {
@@ -155,17 +158,17 @@ div.posl{
 
 ul.ssubmenuu {
 	position: fixed;
-	top: 58px;
+	top: 50px;
 	color: #ff9700;
 }
 
-nav.panel > div:hover > div.posl {
+.panel > .poslogimg:hover > .posl {
 	display: block;
 }
 
 #warner{
-	top: 200px;
-	right:520px;
+	top: 10px;
+	right: 10px;
 }
 
 .reg{
@@ -178,21 +181,20 @@ nav.panel > div:hover > div.posl {
 	padding-top: 9px;
 	padding-bottom: 9px;
 	padding-right: 12px;
-	margin-top: 25px;
 }
 
 input[type="text"], input[type="password"] {
-	border-radius: 4px;
+	border-radius: 0.5vmax;
 	background-color: #f5f6f7;
 	box-shadow: 0 1px white, inset 0 2px 2px rgba(0, 0, 0, 0.1);
 	border: 1px solid #b1b3b8;
-	font-size: 18px;
-	height: 57px;
-	margin-left: 12px;
-	padding-left: 12px;
-	width: 248px;
+	font-size: 2.2vmax;
+	height: 7vmax;
+	margin-left: 1.5vmax;
+	padding-left: 1.5vmax;
+	width: 28vw;
 	transition: all 0.1s ease;
-	position:relative;
+	position: relative;
 }
 
 input[type="text"]::placeholder, input[type="password"]::placeholder{
@@ -206,11 +208,10 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	border-radius: 5px;
 	color: white;
 	cursor: pointer;
-	margin-left: 10px;
-	font-size: 16px;
-	font-weight: bolder;
-	height: 52px;
-	padding: 12px 12px;
+	font-size: 2vmin;
+	margin-left: 1vw;
+	padding: 1vw 1vw;
+	position: relative;
 	text-shadow: 2px 2px 0px black;
 	box-shadow: inset 0 -5px 2px rgba(255, 255, 255, 0.2);
 }
@@ -229,16 +230,21 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 
 .pass{
 	margin-top: 9px;
-	margin-bottom: 9px;
 }
 
 .logo{
 	user-select: none;
 	color: #c14503;
-	font-size: 24px;
+	font-size: 3vw;
 	font-weight: bolder;
 	margin-left: 12px;
+	padding-right: 12px;
 	margin-bottom: 9px;
+}
+
+.logoi{
+	width: 8vw;
+	height: 8vw;
 }
 
 .warn{
@@ -246,7 +252,7 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	display: none;
 	color: #c14503;
 	font-weight: bolder;
-	margin-left: 12px;
+	margin-left: 1.5vmax;
 	position: relative;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -259,10 +265,11 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	background-color: rgba(245, 246, 247, 0.9);
 	border-radius: 4px;
 	padding: 9px;
-	width: 150px;
+	font-size: 2vw;
+	width: 18vw;
 	color: #c14503;
 	font-weight: bolder;
-	position: absolute;
+	position: fixed;
 }
 
 .warnimg{
@@ -273,21 +280,23 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 .randimg{
 	position: relative;
 	transform: translate(0%, 30%);
+	width: 4vmin;
+	height: 4vmin;
 }
 
 .button {
 	user-select: none;
 	background: #c14503;
 	border: 0;
-	width: 200px;
-	text-align: center;
-	border-radius: 5px;
+	border-radius: 0.6vmax;
 	color: #FFFFFF;
 	cursor: pointer;
-	font-size: 16px;
+	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin-left: 287px;
-	padding: 16px 12px;
+	margin-top: 9px;
+	margin-left: 33vw;
+	padding: 1.5vmax 1.5vmax;
 	position: relative;
 	text-shadow: 2px 2px 0px black;
 	box-shadow: inset 0 -5px 2px rgba(255, 255, 255, 0.2);

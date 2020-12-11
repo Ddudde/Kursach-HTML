@@ -38,7 +38,7 @@ export function init() {
 	const objLoader2 = new OBJLoader2();
 	const callbackOnLoad = function ( object3d ) {
 		object3d.position.x = 0;
-		object3d.position.y = 0;
+		object3d.position.y = -2;
 		object3d.position.z = 0;
 		scene.add( object3d );
 		console.log( 'Loading complete: ' + modelName );

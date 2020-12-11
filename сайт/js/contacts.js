@@ -17,7 +17,10 @@ document.addEventListener("DOMContentLoaded",function(){
 	let icons = [ch1, ch2, ch3];
 	logimg.innerHTML = '';
 	logimg.appendChild(icons[parseInt(hsh[2].split('=')[1])-1]);
-	logimg.innerHTML += hsh[0].split('=')[1];
+	var tlog = document.createElement("span");
+	tlog.id = 'tlog';
+	tlog.innerHTML = hsh[0].split('=')[1];
+	logimg.appendChild(tlog);
 	logimg.appendChild(edit);
 	limg = document.getElementById("limg");
 	eimg = document.getElementById("eimg");

@@ -8,27 +8,25 @@ nav{
 }
 
 .panel{
-	display: none;
+	user-select: none;
 	position:fixed;
-	left:0;
-	width: 1px;
-	margin-top: 50px;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 50px;
 	border-bottom: 1px solid gray;
-	z-index: 1;
 }
 
 .nov{
 	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
-	font-size: 24px;
-	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin: 15px 5px;
-	position: fixed;
-	top: 0;
-	left: 10px;
-	z-index: 1;
+	display: inline-block;
+	position: absolute;
+	line-height:50px;
+	left: 5%;
 }
 
 .nov:hover{
@@ -44,14 +42,12 @@ nav{
 	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
-	font-size: 24px;
-	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin: 15px 5px;
-	position: fixed;
-	top: 0;
-	left: 33%;
-	transform: translate(-33%, 0%);
+	display: inline-block;
+	position: absolute;
+	line-height:50px;
+	left: 30%;
 }
 
 .kon:hover{
@@ -67,14 +63,12 @@ nav{
 	text-decoration: none;
 	cursor: pointer;
 	color: #ff9700;
-	font-size: 24px;
-	text-align: center;
+	font-size: 2vw;
 	font-weight: bold;
-	margin: 15px 5px;
-	position: fixed;
-	top: 0;
-	left: 66%;
-	transform: translate(-66%, 0%);
+	display: inline-block;
+	position: absolute;
+	line-height:50px;
+	left: 60%;
 }
 
 .glav:hover{
@@ -86,19 +80,23 @@ nav{
 	color: #d76f00;
 }
 
+.poslogimg{
+	display: inline-block;
+	position: absolute;
+	right: 5%;
+	line-height:50px;
+}
+
+#tlog{
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .logimg{
-	display: none;
+	font-size: 2vw;
+	cursor: pointer;
 	color: #ff9700;
-	font-size: 48px;
-	text-align: center;
 	font-weight: bold;
-	margin-top: 5px;
-	margin-right: 5px;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1;
 }
 
 .logimg:hover{
@@ -111,20 +109,23 @@ nav{
 }
 
 #limg{
-	position: relative;
-	transform: translate(0%, 30%);
 	margin-right: 5px;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #eimg{
-	position: relative;
 	margin-left: 10px;
-	transform: translate(0%, 5%);
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .hello{
+	user-select: none;
 	color: #ff9700;
-	font-size: 48px;
+	font-size: 3vw;
 	text-align: center;
 	font-weight: bold;
 	position: absolute;
@@ -134,6 +135,7 @@ nav{
 }
 
 .hellob{
+	display: inline-block;
 	user-select: none;
 	background: #c14503;
 	border-radius: 5px;
@@ -173,20 +175,19 @@ nav{
 }
 
 @keyframes logimga {
-	0%{font-size: 48px;top: 50%;left: 50%;transform: translate(-50%, -50%);text-shadow: 0 0 3vw #FFFFFF;position:fixed;}
-	10%{font-size: 42px;top: 40%;left: auto;right: 40%;transform: translate(-25%, -25%);text-shadow: 0 0 2vw #FFFFFF;position:fixed;}
-	25%{font-size: 40px;top: 30%;left: auto;right: 30%;transform: translate(0%, 0%);text-shadow: 0 0 2vw #FFFFFF;position:fixed;}
-	50%{font-size: 34px;top: 20%;left: auto;right: 20%;transform: translate(0%, 0%);text-shadow: 0 0 1vw #FFFFFF;position:fixed;}
-	75%{font-size: 30px;top: 10%;left: auto;right: 10%;transform: translate(0%, 0%);text-shadow: 0 0 1vw #FFFFFF;position:fixed;}
-	100%{font-size: 24px;left: auto;top: 0; right: 10px;transform: translate(0%, 0%);text-shadow: 0 0 0vw #FFFFFF;position:fixed;}
+	0%{font-size: 48px;text-shadow: 0 0 3vw #FFFFFF;}
+	10%{font-size: 42px;text-shadow: 0 0 2vw #FFFFFF;}
+	25%{font-size: 40px;text-shadow: 0 0 2vw #FFFFFF;}
+	50%{font-size: 34px;text-shadow: 0 0 1vw #FFFFFF;}
+	75%{font-size: 30px;text-shadow: 0 0 1vw #FFFFFF;}
+	100%{font-size: 24px;text-shadow: 0 0 0vw #FFFFFF;}
 }
 
 @keyframes limga {
-	0%{width: 128px; height: 128px;transform: translate(0%, 30%);}
-	50%{width: 64px; height: 64px;transform: translate(0%, 27%);}
-	100%{width: 32px; height: 32px;transform: translate(0%, 25%);}
+	0%{width: 128px; height: 128px;}
+	50%{width: 64px; height: 64px;}
+	100%{width: 32px; height: 32px;}
 }
-
 
 ul {
 	list-style: none;
@@ -200,6 +201,7 @@ li{
 	padding: 10px;
 	border: 1px outset gray;
 	cursor: pointer;
+	line-height: normal;
 }
 
 li > a {
@@ -227,10 +229,10 @@ div.posl{
 
 ul.ssubmenuu {
 	position: fixed;
-	top: 58px;
+	top: 50px;
 	color: #ff9700;
 }
 
-nav.panel > div:hover > div.posl {
+.panel > .poslogimg:hover > .posl {
 	display: block;
 }
