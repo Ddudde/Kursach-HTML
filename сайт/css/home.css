@@ -8,7 +8,10 @@ nav{
 }
 
 .panel{
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 	position:fixed;
 	left: 0;
 	top: 0;
@@ -123,7 +126,10 @@ nav{
 }
 
 .hello{
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 	color: #ff9700;
 	font-size: 3vw;
 	text-align: center;
@@ -131,12 +137,17 @@ nav{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        -ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
 }
 
 .hellob{
 	display: inline-block;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 	background: #c14503;
 	border-radius: 5px;
 	color: white;
@@ -145,19 +156,30 @@ nav{
 	font-weight: bolder;
 	padding: 12px 12px;
 	text-shadow: 2px 2px 0px black;
-	box-shadow: inset 0 -5px 2px rgba(255, 255, 255, 0.2);
+	-webkit-box-shadow: inset 0 -5px 2px rgba(255, 255, 255, 0.2);
+	        box-shadow: inset 0 -5px 2px rgba(255, 255, 255, 0.2);
 }
 
 .hellob:hover
 {
 	text-shadow: none;
-	box-shadow: 0 0 5px 5px #B8860B, inset 0 -50px 2px rgba(255, 255, 255, 0.2);
+	-webkit-box-shadow: 0 0 5px 5px #B8860B, inset 0 -50px 2px rgba(255, 255, 255, 0.2);
+	        box-shadow: 0 0 5px 5px #B8860B, inset 0 -50px 2px rgba(255, 255, 255, 0.2);
 }
 
 .hellob:active
 {
 	text-shadow: none;
-	box-shadow: 0 0 10px 10px #B8860B, inset 0 -50px 2px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 0 10px 10px #B8860B, inset 0 -50px 2px rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 0 10px 10px #B8860B, inset 0 -50px 2px rgba(0, 0, 0, 0.2);
+}
+
+@-webkit-keyframes hra {
+	0%{width: 0vw;}
+	25%{width: 25vw;}
+	50%{width: 50vw;}
+	75%{width: 75vw;}
+	100%{width: 100vw;}
 }
 
 @keyframes hra {
@@ -168,10 +190,25 @@ nav{
 	100%{width: 100vw;}
 }
 
+@-webkit-keyframes stlogimga {
+	0%{text-shadow: 0 0 1vw #FFFFFF;}
+	50%{text-shadow: 0 0 2vw #FFFFFF;}
+	100%{text-shadow: 0 0 3vw #FFFFFF;}
+}
+
 @keyframes stlogimga {
 	0%{text-shadow: 0 0 1vw #FFFFFF;}
 	50%{text-shadow: 0 0 2vw #FFFFFF;}
 	100%{text-shadow: 0 0 3vw #FFFFFF;}
+}
+
+@-webkit-keyframes logimga {
+	0%{font-size: 48px;text-shadow: 0 0 3vw #FFFFFF;}
+	10%{font-size: 42px;text-shadow: 0 0 2vw #FFFFFF;}
+	25%{font-size: 40px;text-shadow: 0 0 2vw #FFFFFF;}
+	50%{font-size: 34px;text-shadow: 0 0 1vw #FFFFFF;}
+	75%{font-size: 30px;text-shadow: 0 0 1vw #FFFFFF;}
+	100%{font-size: 24px;text-shadow: 0 0 0vw #FFFFFF;}
 }
 
 @keyframes logimga {
@@ -181,6 +218,12 @@ nav{
 	50%{font-size: 34px;text-shadow: 0 0 1vw #FFFFFF;}
 	75%{font-size: 30px;text-shadow: 0 0 1vw #FFFFFF;}
 	100%{font-size: 24px;text-shadow: 0 0 0vw #FFFFFF;}
+}
+
+@-webkit-keyframes limga {
+	0%{width: 128px; height: 128px;}
+	50%{width: 64px; height: 64px;}
+	100%{width: 32px; height: 32px;}
 }
 
 @keyframes limga {

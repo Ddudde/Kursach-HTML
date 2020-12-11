@@ -4,7 +4,10 @@ body{
 }
 
 .panel{
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 	position:fixed;
 	left: 0;
 	top: 0;
@@ -124,7 +127,9 @@ body{
 	margin-top: 10px;
 	top: 70px;
 	left: 50%;
-	transform: translate(-50%, 0%);
+	-webkit-transform: translate(-50%, 0%);
+	        -ms-transform: translate(-50%, 0%);
+	    transform: translate(-50%, 0%);
 }
 
 .imk{
