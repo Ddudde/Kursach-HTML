@@ -18,6 +18,7 @@ nav{
 	width: 100vw;
 	height: 50px;
 	border-bottom: 1px solid gray;
+	z-index: 1;
 }
 
 .nov{

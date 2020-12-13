@@ -57,7 +57,9 @@ window.start = function start(){
 	animation: hra 1s linear infinite`);
 	setTimeout(function () {
 		her.setAttribute('style', `display: inline-block;
-		animation: void 0; width: 100vw`);
+		animation: void 0;
+		width: 100vw;
+		z-index: 1;`);
 	}, 975);
 	logimg.setAttribute('style', `animation: stlogimga 2s linear infinite`);
 	setTimeout(function () {
