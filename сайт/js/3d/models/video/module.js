@@ -1,6 +1,6 @@
 import * as THREE from '../../three.module.js';
 import Stats from '../../stats.module.js';
-THREE.Cache.enabled = false;
+THREE.Cache.enabled = true;
 import { MTLLoader } from "../../MTLLoader.js";
 import { OBJLoader2 } from "../../OBJLoader2.js";
 import { MtlObjBridge } from "../../obj2/bridge/MtlObjBridge.js";

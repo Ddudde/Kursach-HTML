@@ -182,14 +182,16 @@ ul.ssubmenuu {
 	    -ms-transform: translate(-50%, -50%);
 	        transform: translate(-50%, -50%);
 	background-color: rgba(245, 246, 247);
-	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
 	padding-top: 9px;
 	padding-bottom: 9px;
 	padding-right: 12px;
 }
 
 input[type="text"], input[type="password"] {
-	border-radius: 0.5vmax;
+	-webkit-border-radius: 0.5vmax;
+	        border-radius: 0.5vmax;
 	background-color: #f5f6f7;
 	-webkit-box-shadow: 0 1px white, inset 0 2px 2px rgba(0, 0, 0, 0.1);
 	        box-shadow: 0 1px white, inset 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -239,7 +241,8 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	        user-select: none;
 	background: #c14503;
 	border: 0;
-	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
 	color: white;
 	cursor: pointer;
 	font-size: 2vmin;
@@ -312,7 +315,8 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	-webkit-box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
 	        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
 	background-color: rgba(245, 246, 247, 0.9);
-	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
 	padding: 9px;
 	font-size: 2vw;
 	width: 18vw;
@@ -344,7 +348,8 @@ input[type="text"]::placeholder, input[type="password"]::placeholder{
 	        user-select: none;
 	background: #c14503;
 	border: 0;
-	border-radius: 0.6vmax;
+	-webkit-border-radius: 0.6vmax;
+	        border-radius: 0.6vmax;
 	color: #FFFFFF;
 	cursor: pointer;
 	text-align: center;

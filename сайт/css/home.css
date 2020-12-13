@@ -149,7 +149,8 @@ nav{
 	    -ms-user-select: none;
 	        user-select: none;
 	background: #c14503;
-	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
 	color: white;
 	cursor: pointer;
 	font-size: 16px;
