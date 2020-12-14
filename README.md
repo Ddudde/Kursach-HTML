@@ -1,3 +1,3 @@
 Пошла вода в хату!
 
-http://f0492685.xsph.ru/
+https://cursach228.000webhostapp.com/
