@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	font-size: 2vw;
 	color: #ff9700;
 	bottom: 0;
-	z-index: -1;`);//document.body.scrollHeight*0.0125
+	z-index: -1;`);
 	document.body.appendChild(d);
 	d1.src = "media/up.png";
 	d1.setAttribute('style', `user-select: none;
