@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC  "-//W3C//DTD HTML 4.01 Transitional//EN" "www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=5,6,7,8,9,10,11" >
+		<meta name="viewport" content="width=device-width">
+		<title>Комплектующие для ПК</title>
+		<script defer src="js/lib/jquery-1.12.4.min.js"></script>
+		<script defer src="js/lib/less-1.3.3.js"></script>
+		<script defer src="js/settings.js"></script>
+		<script defer src="js/lib/jquery.placeholder.js"></script>
+		<link rel="stylesheet" href="css/start_img">
+		<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABMLAAATCwAAAAAAAAAAAAD///8A0NDIANDQyADQ0MgA2dnRAIuJgQAsKSAAMzAnAC8qJAArJR8AIx8aACEdFwAjHxoGKyciHjk3MT5QTUhlbmxoi3t4dJBIRUBpKCUhMRYTEQgIBAUAgoJ1ALCxngCqqpkAqamYAK6ungDq6OUA/f39AP///wD///8A////AP///wDQ0MgA0NDIANDQyADZ2dEAiYd/ACUiGQAqJx4AJyIbACgiHAMtKSQgQD03RlpXUW51c26Yk5GMvq2rpuDAv7n2vry1+ZiVjOJua2OvR0Q+ch4bGTmEhHcEsrKgAKysmwCrrJoAra2dAOro5QD9/f0A////AP///wD///8A////AM7OxQDOzsUAzs7FANXVzQCUkooqWVZOdH59dZmdm5W9ubez39DOyvvi4t3/6enl/+jn4v/f3tj/1NLL/8jGvf+5t6z/sK2g/6+snv+fm43/mJaIyqCdjy6bmYsAmpiKAJiWiAC4tqsA7uzqAPz9/AD///8A////AP///wD///8A8vLvAPLy7wDy8u8A8fLvAPHx7277+/rZ/Pv6/vX18v/19fP/8fDu/+bl4v/b2tX/09HK/8rIwP+/vbP/tLGm/6WilP+em4v/p6SW/4+Nh+ZWU06WOzgxUy8qJQkuKSQAKiUgAMC9uADw7+0A/Pz8AP///wD///8A////AP///wD///8A////AP///wD///8A////APX19ADn5uMT2tnSQM/NxnHKycGJw8G4cr67sku3tao9r62gY6ypm6GwraHYvbqw/8rHwP/V08z/5+bh/9vb1/86NjD/IyAcXRgVEQBRTkgA1NLLAO3s6gD8/PwA////AP///wD///8A////APz8+wD5+fgA9/f1APv7+gD9/f0A9fX0AOfm4wDa2dIAysm/AMG/tgC8urAAu7iuALe1qgCvrJ4AqaaXAM3KwgHs6+l86urn6+Tj3//i4dz/zczH/y4rKaATEREcVVNNALy6sADa2NIA8O/tAP39/QD///8A////AP///wD///8A/Pz8APn5+ADz8/EA7u7rAO3t6QDp6OUA5OLdANva1ADS0ckAzMrCAMjGvgDGw7sAw8G3AL67sQC2tKgA1dLLAOrp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D/9GQg3/UUoO/11UD/9pXxL/c2kV/4N2Gf9YTRj/DAkO/0dFQPSdmpB3////AP///wAzMyEAMzMiADg0KwA4NCwAODQsADg0LAA4NCwAODQsADg0LAA4NCwAODQsADg0LA84NCwyODQsXDc0LIs0MCq5Lyso5SonJP8mIiL/Ix8f/x8cG/8gHBf/JCAT/ywoEv87NRL/UEgS/0M9E/8PDA7/Pjw4+pSSh4T///8A////ADMzIQAzMyIAODQrADg0LAA4NCwAODQsADg0LAA4NCwAODQsADg0LAA4NCwAODQsADg0LAA4NCwAODUsADYyKgAzLygJLyskKCsnIlAnIx9+IyAcrR8cGtQbGBj3FhMV/xQRFf8TEBT/FRMT/xMQD/80MS7/iIR6mP///wD///8AMzMhADMzIgA4NCsAODQsADg0LAA4NCwAODQsADg0LAA4NCwAODQsADg0LAA4NCwAODQsADg0LAA4NSwANjIqADMvKAAvKyQALCciACckHwAjIBsAIBwZABwZFhoYFRNEFxQTcRcUE6EXFBPLDwwL8UtJR9uxr6pm////AP///wAzMyEAMzMiADg0KwA4NCwAODQsADg0LAA4NCwAODQsADg0LAA4NCwAODQsADg0LAA4NCwAODQsADg1LAA2MioAMy8oAC8rJAAsJyIAJyQfACMgGwAgHBkAHBkWABgVEwAWExIIFhMSJBYTEksMCQiBaWdlaNLSzh////8A//AH//+AAf/4AAH/+AAA//4AAP///wD///+BB//wAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAHAAAABwAAAAcAAAAHAAAAB/gAAAf/wAAH//4AB///+Af///4E=">
+	</head>
+	<body>
+		<script defer src="js/start.js"></script>
+		<script defer src="js/default.js"></script>
+		<div class="fullscreen-bg">
+			<div class="over"></div>
+		</div>
+		<div class="start">Хотите собрать себе новый ПК, но не знаете с чего начать?
+			<span><br>Мы вам поможем!</span>
+		</div>
+		<div class="startimg" onclick="kon();"><div id="istartimg"></div></div>
+		<div class="posit" id="posform">
+			<div class="help">
+				<span id="r">Нет аккаунта? <a class="helpa" onclick="onreg();">Регистрация!</a></span>
+				<span id="v">Есть аккаунт? <a class="helpa" onclick="onvxod();">Вход!</a></span>
+			</div>
+			<form action="#" class="vxod" id="vxod">
+				<div>
+					<input class="login" type="text" placeholder="Логин" id="logv" required pattern="^[a-zA-Z0-9]+$">
+				</div>
+				<div>
+					<input class="pass" type="password" placeholder="Пароль" id="pasv" required pattern="^[a-zA-Z0-9]+$" autocomplete="on">
+				</div>
+				<span class="warn" id="warnc"><div class="warnimg" id="iwarn"></div>Включён Caps Lock!</span>
+				<div class="button" onclick="vxo();">ВОЙТИ!<div class="ieShadow"></div></div>
+			</form>
+			<form action="#" class="reg" id="reg">
+				<div class="logo">
+					<p>Выберите иконку для профиля:</p>
+					<input id="ch1" name="ico" type="radio" value="1" checked><div class="logoi" id="ich1"></div>
+					<input id="ch2" name="ico" type="radio" value="2"><div class="logoi" id="ich2"></div>
+					<input id="ch3" name="ico" type="radio" value="3"><div class="logoi" id="ich3"></div>
+				</div>
+				<div>
+					<input class="login" type="text" placeholder="Логин" id="logr" required pattern="^[a-zA-Z0-9]+$">
+				</div>
+				<div>
+					<input class="pass" type="password" placeholder="Пароль" id="pasr" required pattern="^[a-zA-Z0-9]+$" autocomplete="on">
+					<span class="rand" onclick="gen_pas();"><div class="randimg" id="irand"></div>Случайный пароль</span>
+				</div>
+				<span class="warn" id="warncr"><div class="warnimg" id="iwarn"></div>Включён Caps Lock!</span>
+				<div class="button" onclick="rego();">ЗАРЕГИСТРИРОВАТЬСЯ!</div>
+			</form>
+		</div>
+		<div class="warne" id="warnew"><div class="warnimg" id="iwarn"></div>Внимание! <p>Неверный логин или пароль</p></div>
+		<div class="warne" id="warnev"><div class="warnimg" id="iwarn"></div>Внимание! <p>Допустимы только латинница и цифры</p></div>
+		<div class="warne" id="warner"><div class="warnimg" id="iwarn"></div>Внимание! <p id="wt">Допустимы только латинница и цифры</p></div>
+	</body>
+</html>
