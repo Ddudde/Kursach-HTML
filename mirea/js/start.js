@@ -1,11 +1,13 @@
-var regb, vxodb;
-$('body').keydown(checkCaps);
-$('#logv').bind('input', inpchv);
-$('#logr').bind('input', inpchr);
-$('#pasv').bind('input', inpchv);
-$('#pasr').bind('input', inpchr);
-regb = false;
-vxodb = false;
+$(window).ready(function(){
+	var regb, vxodb;
+	$('body').keydown(checkCaps);
+	$('#logv').bind('input', inpchv);
+	$('#logr').bind('input', inpchr);
+	$('#pasv').bind('input', inpchv);
+	$('#pasr').bind('input', inpchr);
+	regb = false;
+	vxodb = false;
+});
 
 function kon(){
     window.scrollTo(0, window.innerHeight);

@@ -1,0 +1,1 @@
+when-changed -1 test.html echo

@@ -2,10 +2,10 @@ $(window).ready(function(){
 	var slvh, slvw;
 	slvh = $(window).height() * 0.01;
 	slvw = $(window).width() * 0.01;
-    var linke  = document.createElement('link');
-    linke.rel  = 'stylesheet/less';
-    linke.type = 'text/css';
-    linke.href = 'css/start.less';
+	var linke  = document.createElement('link');
+	linke.rel  = 'stylesheet/less';
+	linke.type = 'text/css';
+	linke.href = 'css/start.less';
 	less.sheets = [linke];
 	less.refresh();
 	less.refreshStyles();
@@ -15,6 +15,7 @@ $(window).ready(function(){
 	  '@lvmax': Math.max(slvw, slvh) + ''
 	});
 });
+
 function con(par) {
 	console.log(par);
 	return 0;
