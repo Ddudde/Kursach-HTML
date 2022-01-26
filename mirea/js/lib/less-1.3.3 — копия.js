@@ -4211,7 +4211,7 @@ function extractId(href) {
 
 function icreateCSS(styles) {
     var css;
-	var id = 'less:';
+	var id = 'less:' + extractId('');
 
     // If the stylesheet doesn't exist, create a new node
     if ((css = document.getElementById(id)) === null) {
