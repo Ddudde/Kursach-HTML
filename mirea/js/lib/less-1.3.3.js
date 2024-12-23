@@ -144,7 +144,7 @@ if (typeof environment === "object" && ({}).toString.call(environment) === "[obj
     less.mode = 'rhino';
 } else if (typeof(window) === 'undefined') {
     // Node.js
-    less = exports,
+    less = null,
     tree = require('./tree');
     less.mode = 'node';
 } else {
@@ -3986,7 +3986,7 @@ for (var i = 0; i < links.length; i++) {
 var session_cache = '';
 less.modifyVars = function(record) {
 	var str = session_cache;
-    for (name in record) {
+    for (var name in record) {
         str += ((name.slice(0,1) === '@')? '' : '@') + name +': '+ 
                 ((record[name].slice(-1) === ';')? record[name] : record[name] +';');
     }
@@ -3997,7 +3997,7 @@ less.modifyVars = function(record) {
 
 less.initwithVars = function(css, record) {
 	var str = css;
-    for (name in record) {
+    for (var name in record) {
         str += ((name.slice(0,1) === '@')? '' : '@') + name +': '+ 
                 ((record[name].slice(-1) === ';')? record[name] : record[name] +';');
     }
